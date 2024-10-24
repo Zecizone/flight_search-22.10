@@ -1,19 +1,11 @@
-import React from 'react';
 import styles from './styles.module.scss';
 import OkIMG from '../../assets/ok.png';
 import { setAirlines, setStops } from '../../features/filters/filterSlice';
 import { useAppDispatch, useAppSelector } from '../../hooks/hooks';
 import { selectFilters } from '../../features/selectors/filtersSelectors';
+import { CustomListProps } from './CustomList.props.tsx';
 
-interface CustomListProps {
-  label: string;
-  title: string;
-  list: string[];
-  type: string;
-  random: number;
-}
-
-const CustomList: React.FC<CustomListProps> = ({ ...props }) => {
+export default function  CustomList ({ ...props } : CustomListProps) {
   const filters = useAppSelector(selectFilters);
   const dispatch = useAppDispatch();
 
@@ -73,6 +65,4 @@ const CustomList: React.FC<CustomListProps> = ({ ...props }) => {
         ))}
     </div>
   );
-};
-
-export default CustomList;
+}

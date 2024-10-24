@@ -1,13 +1,13 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { fetchTicketsAsync } from '../../features/tickets/ticketsAsyncThunk';
-import Header from '../../components/Header/Header';
 import styles from './style.module.scss';
 import Filter from '../../components/TariffSelector/TariffSelector';
 import Tickets from '../Tickets/Tickets';
 import { Sidebar } from '../Sidebar/Sidebar';
 import { useAppDispatch } from '../../hooks/hooks';
+import Header from '../Header/Header.tsx';
 
-const Home: React.FC = () => {
+export default function Home() {
   const dispatch = useAppDispatch();
 
   useEffect(() => {
@@ -24,4 +24,3 @@ const Home: React.FC = () => {
   );
 };
 
-export default Home;

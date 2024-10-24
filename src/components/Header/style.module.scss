@@ -1,0 +1,22 @@
+@import "../../styles/variables";
+
+.container {
+  display: flex;
+  align-items: center;
+  grid-area: header;
+  padding: 20px;
+}
+
+.logo {
+  width: 100px;
+  height: 80px;
+}
+
+.title {
+  font-size: 24px;
+  margin-left: 20px;
+  color: $purple;
+  font-weight: 700;
+  display: block;
+  font-family: $inter-b;
+}

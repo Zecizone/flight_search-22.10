@@ -4,10 +4,10 @@ interface LoadButtonProps {
   onClick: () => void;
 }
 
-export const LoadButton: React.FC<LoadButtonProps> = ({ onClick }) => {
+export default function LoadButton({ onClick } : LoadButtonProps) {
   return (
     <button className={styles.loadbutton} type='button' onClick={onClick}>
       Загрузить еще билеты
     </button>
   );
-};
+}

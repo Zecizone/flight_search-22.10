@@ -6,7 +6,7 @@ interface Ticket {
   ticket: ITicket;
 }
 
-const TicketCard: React.FC<Ticket> = ({ ticket }) => {
+export default function TicketCard ({ ticket }: Ticket) {
   return (
     <div className={styles.ticket}>
       <div className={`${styles.ticket__row} ${styles.ticket__row_fixheight}`}>
@@ -39,6 +39,4 @@ const TicketCard: React.FC<Ticket> = ({ ticket }) => {
       </div>
     </div>
   );
-};
-
-export default TicketCard;
+}

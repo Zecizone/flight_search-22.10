@@ -16,7 +16,7 @@ interface propsList {
   random: number;
 }
 
-export const Sidebar: React.FC = () => {
+export function Sidebar () {
   const tickets = useAppSelector(selectTickets);
   const filters = useAppSelector(selectFilters);
 
@@ -114,4 +114,4 @@ export const Sidebar: React.FC = () => {
       <CustomList {...initialPropsListCompany} />
     </aside>
   );
-};
+}
