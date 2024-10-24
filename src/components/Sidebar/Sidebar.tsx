@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import styles from './style.module.scss';
 import { ITicket } from '../TicketCard/ITicket';
 import CustomList from '../CustomList/CustomList';
